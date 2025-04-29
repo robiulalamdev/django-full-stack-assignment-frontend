@@ -95,12 +95,20 @@ const useAuth = () => {
   const registerUser = async (userData) => {
     setErrorMsg("");
     try {
-      await apiClient.post("/auth/users/", userData);
-      return {
-        success: true,
-        message:
-          "Registration successfull. Check your email to activate your account.",
-      };
+      const response = await apiClient.post("/auth/users/", userData);
+      console.log(response);
+      if (response?.data) {
+        return {
+          success: true,
+          message:
+            "Registration successfull. Check your email to activate your account.",
+        };
+      } else {
+        if (response?.message) {
+          setErrorMsg(response?.message);
+          return { success: false, message: response?.message };
+        }
+      }
     } catch (error) {
       return handleAPIError(error, "Registration Failed! Try Again");
     }
