@@ -6,3 +6,11 @@ const apiClient = axios.create({
 });
 
 export default apiClient;
+
+apiClient.interceptors.request.use((config) => {
+  const token = JSON.parse(localStorage.getItem("authTokens"))?.access;
+  if (token) {
+    config.headers.Authorization = `JWT ${token}`;
+  }
+  return config;
+});

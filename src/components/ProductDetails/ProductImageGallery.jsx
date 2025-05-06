@@ -6,7 +6,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation, Thumbs } from "swiper/modules";
 import { useState } from "react";
-import defaultImage from "../../assets/default_product.jpg";
+import defaultImage from "../../assets/default_product.png";
+import { viewImage } from "../../services/viewImage";
 
 const ProductImageGallery = ({ images, ProductName }) => {
   const [thumbsSwiper] = useState(null);
@@ -26,7 +27,7 @@ const ProductImageGallery = ({ images, ProductName }) => {
           <SwiperSlide key={index}>
             <div className="aspect-square bg-base-100">
               <img
-                src={imageObj.image}
+                src={viewImage(imageObj?.image)}
                 alt={ProductName}
                 className="h-full w-full object-contain"
               />

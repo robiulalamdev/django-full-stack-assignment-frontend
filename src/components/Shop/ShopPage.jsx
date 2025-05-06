@@ -46,11 +46,13 @@ const ShopPage = () => {
         handleSorting={setSortOrder}
       />
       <ProductList products={products} loading={loading} />
-      <Pagination
-        totalPages={totalPages}
-        currentPage={currentPage}
-        handlePageChange={setCurrentPage}
-      />
+      <div className="mt-10">
+        <Pagination
+          totalPages={totalPages}
+          currentPage={currentPage}
+          handlePageChange={setCurrentPage}
+        />
+      </div>
     </div>
   );
 };

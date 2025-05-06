@@ -64,7 +64,7 @@ const Sidebar = () => {
 
         {/* Sidebar footer */}
         <div className="mt-auto pt-6 text-xs text-base-content/70">
-          © 2025 PhiMart Admin
+          © 2025 - All right reserved by Clothify
         </div>
       </aside>
     </div>

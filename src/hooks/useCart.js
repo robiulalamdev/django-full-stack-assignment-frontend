@@ -2,9 +2,10 @@ import { useCallback, useEffect, useState } from "react";
 import authApiClient from "../services/auth-api-client";
 
 const useCart = () => {
-  const [authToken] = useState(
-    () => JSON.parse(localStorage.getItem("authTokens"))?.access
-  );
+  // const [authToken] = useState(
+  //   () => JSON.parse(localStorage.getItem("authTokens"))?.access
+  // );
+
   const [cart, setCart] = useState(null);
   const [cartId, setCartId] = useState(() => localStorage.getItem("cartId"));
   const [loading, setLoading] = useState(false);

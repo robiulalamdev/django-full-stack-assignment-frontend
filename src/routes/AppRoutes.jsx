@@ -24,11 +24,11 @@ const AppRoutes = () => {
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
-        <Route path="shop" element={<Shop />} />
+        <Route path="products" element={<Shop />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="activate/:uid/:token" element={<ActivateAccount />} />
-        <Route path="shop/:productId" element={<ProductDetail />} />
+        <Route path="products/:productId" element={<ProductDetail />} />
       </Route>
       {/* Private Routes  */}
       <Route

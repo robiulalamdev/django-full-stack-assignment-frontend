@@ -78,7 +78,7 @@ const Register = () => {
                   id="first_name"
                   type="text"
                   placeholder="John"
-                  className={`w-full px-3 py-2 border rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                  className={`w-full px-3 py-2 border rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary ${
                     errors.first_name ? "border-red-500" : "border-gray-300"
                   }`}
                   {...register("first_name", {
@@ -103,7 +103,7 @@ const Register = () => {
                   id="last_name"
                   type="text"
                   placeholder="Doe"
-                  className={`w-full px-3 py-2 border rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                  className={`w-full px-3 py-2 border rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary ${
                     errors.last_name ? "border-red-500" : "border-gray-300"
                   }`}
                   {...register("last_name", {
@@ -129,7 +129,7 @@ const Register = () => {
                 id="email"
                 type="email"
                 placeholder="name@example.com"
-                className={`w-full px-3 py-2 border rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                className={`w-full px-3 py-2 border rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary ${
                   errors.email ? "border-red-500" : "border-gray-300"
                 }`}
                 {...register("email", {
@@ -158,7 +158,7 @@ const Register = () => {
                 id="address"
                 type="text"
                 placeholder="123 Main St, City"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary"
                 {...register("address")}
               />
             </div>
@@ -174,7 +174,7 @@ const Register = () => {
                 id="phone_number"
                 type="text"
                 placeholder="(123) 456-7890"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary"
                 {...register("phone_number")}
               />
             </div>
@@ -190,7 +190,7 @@ const Register = () => {
                 id="password"
                 type="password"
                 placeholder="••••••••"
-                className={`w-full px-3 py-2 border rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                className={`w-full px-3 py-2 border rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary ${
                   errors.password ? "border-red-500" : "border-gray-300"
                 }`}
                 {...register("password", {
@@ -219,7 +219,7 @@ const Register = () => {
                 id="confirm_password"
                 type="password"
                 placeholder="••••••••"
-                className={`w-full px-3 py-2 border rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                className={`w-full px-3 py-2 border rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary ${
                   errors.confirm_password ? "border-red-500" : "border-gray-300"
                 }`}
                 {...register("confirm_password", {
@@ -238,7 +238,7 @@ const Register = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full py-2.5 px-4 bg-[#2EBB77] hover:bg-[#25a568] text-white font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors duration-200 flex justify-center items-center"
+              className="w-full py-2.5 px-4 bg-primary hover:bg-primary text-white font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-colors duration-200 flex justify-center items-center"
             >
               {isSubmitting ? (
                 <>
@@ -275,7 +275,7 @@ const Register = () => {
               Already have an account?{" "}
               <Link
                 to="/login"
-                className="text-[#2EBB77] hover:text-[#25a568] font-medium"
+                className="text-primary hover:text-primary font-medium"
               >
                 Sign in
               </Link>
