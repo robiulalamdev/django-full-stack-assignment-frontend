@@ -28,7 +28,7 @@ const CartSummary = ({ totalPrice, itemCount, cartId }) => {
         <div className="space-y-2">
           <div className="flex justify-between">
             <span className="text-gray-500">Subtotal {itemCount} items</span>
-            <span>${totalPrice.toFixed(2)}</span>
+            <span>${totalPrice?.toFixed(2)}</span>
           </div>
           <div className="flex justify-between">
             <span className="text-gray-500">Shipping</span>

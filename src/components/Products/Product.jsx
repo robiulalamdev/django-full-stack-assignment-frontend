@@ -17,8 +17,8 @@ const Product = () => {
   useEffect(() => {
     setLoading(true);
     apiClient
-      .get("/products/")
-      .then((res) => setProducts(res.data.results))
+      .get("/products/latest")
+      .then((res) => setProducts(res.data))
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
   }, []);
@@ -44,7 +44,7 @@ const Product = () => {
 
         {error && <ErroAlert error={error} />}
         {/* Product Slider  */}
-        {!isLoading && !error && products.length > 0 && (
+        {!isLoading && !error && products?.length > 0 && (
           <Swiper
             modules={[Navigation]}
             spaceBetween={10}
@@ -63,7 +63,7 @@ const Product = () => {
             ))}
           </Swiper>
         )}
-        {!isLoading && !error && products.length === 0 && (
+        {!isLoading && !error && products?.length === 0 && (
           <p className="text-center text-gray-500 mt-6">
             No Products Available
           </p>

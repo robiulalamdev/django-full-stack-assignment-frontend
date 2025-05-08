@@ -95,7 +95,7 @@ const OrderCard = ({ order, onCancel }) => {
         <div className="space-y-2 w-full max-w-[200px]">
           <div className="flex justify-between">
             <span>Subtotal:</span>
-            <span>${order.total_price.toFixed(2)}</span>
+            <span>${order?.total_price?.toFixed(2)}</span>
           </div>
           <div className="flex justify-between">
             <span>Shipping:</span>
@@ -103,7 +103,7 @@ const OrderCard = ({ order, onCancel }) => {
           </div>
           <div className="flex justify-between font-bold border-t pt-2">
             <span>Total:</span>
-            <span>${order.total_price.toFixed(2)}</span>
+            <span>${order?.total_price?.toFixed(2)}</span>
           </div>
         </div>
         {!user.is_staff && order.status === "Not Paid" && (

@@ -1,6 +1,6 @@
 import OrderItems from "./OrderItems";
 
-const OrderTable = ({ items }) => {
+const OrderTable = ({ items = [] }) => {
   return (
     <div className="overflow-x-auto">
       <table className="table-auto w-full border-collapse">
@@ -13,7 +13,7 @@ const OrderTable = ({ items }) => {
           </tr>
         </thead>
         <tbody>
-          {items.map((item) => (
+          {items?.map((item) => (
             // Order Items
             <OrderItems key={item.id} item={item} />
           ))}
