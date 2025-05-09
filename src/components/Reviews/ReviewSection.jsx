@@ -74,7 +74,7 @@ const ReviewSection = () => {
     fetchReviews();
   }, []);
   return (
-    <div className="space-y-8 mt-10 max-w-5xl mx-auto px-4">
+    <div className="space-y-8 mt-10 container mx-auto">
       <div className="flex items-center justify-between">
         <h2 className="text-2xl font-bold">Customer Reviews</h2>
         <div className="badge badge-lg">

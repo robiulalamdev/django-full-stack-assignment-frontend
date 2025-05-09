@@ -1,10 +1,5 @@
 import { useEffect, useState } from "react";
 import ProductItem from "./ProductItem";
-import { Navigation } from "swiper/modules";
-import { SwiperSlide, Swiper } from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
 import ErroAlert from "../ErroAlert";
 import apiClient from "../../services/api-client";
 import { Link } from "react-router";
@@ -25,7 +20,7 @@ const Product = () => {
 
   return (
     <section className="bg-gray-50">
-      <div className="py-12 px-4 max-w-7xl mx-auto">
+      <div className="container py-12 px-4 mx-auto">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-2xl md:text-3xl font-bold">Latest Products</h2>
           <Link
@@ -45,23 +40,11 @@ const Product = () => {
         {error && <ErroAlert error={error} />}
         {/* Product Slider  */}
         {!isLoading && !error && products?.length > 0 && (
-          <Swiper
-            modules={[Navigation]}
-            spaceBetween={10}
-            slidesPerView={1}
-            breakpoints={{
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-            navigation
-            className="mt-4 px-4 container"
-          >
-            {products.map((product) => (
-              <SwiperSlide key={product.id} className="flex justify-center">
-                <ProductItem key={product.id} product={product} />
-              </SwiperSlide>
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {products?.map((product, idx) => (
+              <ProductItem key={idx} product={product} isNew={true} />
             ))}
-          </Swiper>
+          </div>
         )}
         {!isLoading && !error && products?.length === 0 && (
           <p className="text-center text-gray-500 mt-6">

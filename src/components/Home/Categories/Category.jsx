@@ -9,7 +9,7 @@ const Category = () => {
     apiClient.get("/categories").then((res) => setCategories(res.data));
   }, []);
   return (
-    <section className="py-12 px-4 max-w-7xl mx-auto">
+    <section className="container py-12 px-4 mx-auto">
       {/* Category Heading  */}
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-3xl font-bold">Browse Categories</h2>

@@ -15,6 +15,7 @@ import Cart from "../pages/Cart";
 import Orders from "../pages/Orders";
 import PaymentSuccess from "../pages/PaymentSuccess";
 import AddProduct from "../pages/AddProduct";
+import MyReviews from "../pages/Dashboard/MyReviews/MyReviews";
 
 const AppRoutes = () => {
   return (
@@ -45,6 +46,7 @@ const AppRoutes = () => {
         <Route path="orders" element={<Orders />} />
         <Route path="payment/success/" element={<PaymentSuccess />} />
         <Route path="products/add" element={<AddProduct />} />
+        <Route path="reviews" element={<MyReviews />} />
       </Route>
     </Routes>
   );

@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import defaultImage from "../../assets/default_product.png";
 import { viewImage } from "../../services/viewImage";
 
-const ProductItem = ({ product }) => {
+const ProductItem = ({ product, isNew = false }) => {
   return (
     <Link to={`/products/${product.id}`} className="group">
       <div className="card shadow bg-base-100 overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
@@ -17,11 +17,13 @@ const ProductItem = ({ product }) => {
             alt={product.name}
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
-          {/* <div className="absolute bottom-4 right-4">
-            <span className="badge badge-primary text-xs font-bold uppercase text-white">
-              New
-            </span>
-          </div> */}
+          {isNew && (
+            <div className="absolute bottom-4 right-4">
+              <span className="badge badge-primary text-xs font-bold uppercase text-white">
+                New
+              </span>
+            </div>
+          )}
         </figure>
         <div className="card-body p-3">
           <div className="mb-1 flex items-center justify-between min-h-[60px]">

@@ -51,7 +51,7 @@ const Sidebar = () => {
     {
       group: "Account",
       items: [
-        { to: "/reviews", icon: FiStar, label: "My Reviews" },
+        { to: "/dashboard/reviews", icon: FiStar, label: "My Reviews" },
         { to: "/dashboard/profile", icon: FiSettings, label: "Settings" },
       ],
     },
@@ -93,7 +93,7 @@ const Sidebar = () => {
     {
       group: "Content",
       items: [
-        { to: "/reviews", icon: FiStar, label: "Reviews" },
+        { to: "/dashboard/reviews", icon: FiStar, label: "Reviews" },
         { to: "/users", icon: FiUsers, label: "Users" },
       ],
     },
