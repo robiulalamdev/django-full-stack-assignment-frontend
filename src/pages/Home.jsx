@@ -7,9 +7,9 @@ const Home = () => {
   return (
     <div>
       <HeroCarousel />
-      <Features />
       <Category />
       <Product />
+      <Features />
     </div>
   );
 };
