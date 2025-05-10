@@ -14,11 +14,11 @@ const MyReviews = () => {
       setLoading(false);
     });
   }, []);
-  useEffect(() => {
-    apiClient.get(`/admin/statistics/`).then((res) => {
-      console.log(res.data);
-    });
-  }, []);
+  // useEffect(() => {
+  //   apiClient.get(`admin/statistics/`).then((res) => {
+  //     console.log(res.data);
+  //   });
+  // }, []);
   return (
     <div className="container mx-auto px-4 py-8">
       <h2 className="text-2xl font-bold mb-6">My Reviews</h2>
